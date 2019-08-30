@@ -1,0 +1,50 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css">
+  <style>
+  .card{
+    background-color: green,
+   }
+</style>
+</head>
+
+<h1 class="text-center mb-4">Liste des Emails </h1>
+<table>
+  <div class="card">
+    <table id="emails-list">
+      <% @emails.each do |email|%>
+      <tr><tr>
+             <td>
+                <tr id="<%= email.id  %>">
+                  <td id="zzz"><%= email.id  %>
+                  </td>
+                  </td>
+                  <td id="yyy"><%= link_to email.object, email_path(email), method: :get, remote: true%>
+                </td>
+              <td id="xxx">
+            </td>
+       </tr>
+ </tr>
+  <% end %>
+    </table>
+        </div>
+          <div class="container">
+            <div class="card">
+             <table>
+             <tr>
+              <td>Clique le boutton creet EMAILE </td>
+               <td> et on a le OBJECT:EMAIL ET </td>
+               <td>BODY :EMAIL</td>
+              </tr>
+
+             <div>
+                 <%= link_to "recevoir un email", emails_path(@email), method: :post, class: "btn btn-primary", remote: true %>
+                 </div>
+               <div>
+              <a href="/" class="btn btn-success" >tasks</a>
+            </div>
+            </table>
+         </div>
+      </table>
+ 
+</div>
