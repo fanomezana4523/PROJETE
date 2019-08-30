@@ -1,0 +1,13 @@
+<<%= stylesheet_link_tag {1::all}, :cache => true %>
+<style type="text/css">
+	.card{
+		background-color: green,
+	}
+</style>
+<div class="card">
+  <table id="emails-list">
+    <tr><td>ID : <%= @email.id %></td></tr>
+    <tr><td>Object :<h2><%= @email.object %></h2></td></tr>
+    <tr><td>Body : <%= @email.body %></td></tr>
+  </table>
+</div>
